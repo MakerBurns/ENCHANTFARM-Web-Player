@@ -1,0 +1,35 @@
+FORMULAS USED IN ENCHANT FARM
+
+BASIC DAMAGE FORMULA (ALLY -> FOE)
+{(Total SL/(5*2)/(5+2))*Base ATK Power*Weapon Skill Multiplier*STR or MAG/((DEF+STR or MAG)/2)/50+2}*(0.85~1.00)*Attack Multiplier*Misc. Adjustments
+
+BASIC DAMAGE FORMULA (FOE -> ALLY)
+{(LV*2/(5+2))*Base ATK Power*STR or MAG/((DEF+STR or MAG)/2)/50+2}*(0.85~1.00)*Guard Reduction*Defending Reduction*Misc. Adjustments
+
+
+HIT% (ACCURACY)
+(Base HIT%+Item Adjustment)*Attacker's AGI/Defender's AGI(Afterwards, the following checks are executed in order: Blind->Evasive Skills->100% Accuracy->Shrug It Off)
+
+Provided that the HIT% lower limit hasn't been broken by a passive skill, accuracy can never go lower than:
+{(Base HIT%+Item Adjustment)/2}
+
+
+ATTACK MULTIPLIER
+Base Multiplier*Innate Type Multiplier(25%*Adaptibility2+Innate Adjustment Potential)*Attack Range Modifier*Targets All Modifier*Weapon Type Resistance
+
+
+EXPERIENCE (Souls)
+Base EXP*(LV Difference Modifier)*Soul Multiplier*Difficulty Modifier*Fortune Modifier(1.1~1.4)
+
+
+EX SKILL LEARN RATE
+{(Remaining Slots*Learn Modifier2*Growth Modifier(2~3))*Maximum Enemy Rank(1~4)^2/128}
+
+EX SKILL GROWTH RATE
+{(Remaining Growth Stages*Improvement Modifier2*Growth Modifier(2~3))*Maximum Enemy Rank(1~4)^2/128}
+
+Rank 1 Characters may learn 8 EX Skills.
+Rank 2 Characters may learn 6 EX Skills.
+Rank 3 Characters may learn 4 EX Skills.
+
+When foes' levels are lower than the party's average level (Total SL/5), enemy rank is set at 1.

@@ -1,0 +1,797 @@
+This is a small glossary of recurring VIPRPG terminology
+which might help you to better understand and appreciate
+certain slang/memes/etc seen in Enchant Farm.
+
+This is by NO MEANS comprehensive and attempts (poorly) to
+fit only within the scope of points of interest for
+Enchant Farm.
+
+Note that due to the ever-changing and memetic nature
+of VIPRPG characters, memes, slang, etc, these are not
+to be taken as an absolute, but as a general reference.
+Even VIPPERs themselves don't always hold strictly to
+any of these things, and like with any memes/tropes they
+are subject to subversion, inversion, and other manner of
+usage.
+
+
+--- TERMINOLOGY SPECIFIC TO THIS GAME ---
+
+--- ENCHANT FARM (Title) ---
+
+While it isn't 100% agreed upon, it is possible
+that the title for this game was taken partially from
+a game called "Enchanted Arms" which, in Japan, was
+simply called "Enchant Arm."
+---------------------------
+
+--- THE ISLET OF KOTOH (Setting) ---
+
+A location referred to at the end of WIND I CREATOR
+which was possibly intended as the final location
+for that game, but ultimately was cut and made into
+this entire game, ENCHANT FARM.
+
+孤島 (Kotou) - Traditionally defined as a remote,
+isolated island. Stylized as "Kotoh" to hopefully
+make the pronunciation less ambiguous.
+
+While the location is never actually given a name,
+it is consistently referred to as "ＫＯＴＯＵ" in
+full-width Japanese characters (KOTOU if you cannot
+see them in this document for some reason), and I
+made a judgment call to have "Kotoh" be, in effect,
+its name.
+
+I also elected to call it an "islet" rather than an
+"island" as, while the exact definition of an islet
+is disputed with regards to its size and contents,
+stylistically I felt that the diminutive "islet" served
+to better capture the sense of isolation that would
+have been clunkier/longer to write out each time with
+more literal renderings of 孤島. Furthermore, the islet
+itself is not that large in-game, all things considered.
+---------------------------
+
+--- MOUJA (Characters) ---
+
+亡者 (Mouja) - Refers to the deceased and ghosts.
+Also refers to the avaricious, and those who lust
+for something, such as money; お金の亡者 is perhaps
+one of the most common usages of this form.
+
+Mouja in-game refers to the dual meaning of this word,
+as Mouja have all perished at least once, and they will
+fight anyone and everyone in a bid to steal their Souls.
+
+In the original Japanese script, Mouja is almost always
+written in English letters with no real consistency between
+whether it is rendered in full-width (ＭＯＵＪＡ) or half-width.
+---------------------------
+
+--- SHINJA (Characters) ---
+
+信者 (Shinja) - Refers to believers, followers, and adherents.
+Also refers to fans of someone or something in the same sense
+that English speakers use "fan," "fanatic," "fanboy," "fangirl"
+and other similar words.
+
+Shinja in-game refers to the dual meaning of this word,
+as Shinja of both the more reverent types and fanboy types can
+be observed in the game's various locales, devoting themselves
+to deities or music idols.
+
+Much like "Mouja," the Japanese script almost always features
+this word written in English letters with no consistency for
+full-width (ＳＨＩＮＪＡ) or half-width.
+---------------------------
+
+--- MIKADO (Title) ---
+
+帝 (Mikado) - Emperor sovereign of Japan.
+
+In the original JP script, it is referred to exclusively
+in all-caps full-width (ＭＩＫＡＤＯ).
+
+While it is difficult to believe that these characters
+who speak Japanese in the JP script would not know what
+a Mikado is, it all works out nicely for the EN rendering
+where not all players might know what it is.
+---------------------------
+
+--- HIKARI & YAMI ---
+
+光 (Hikari) - Light
+闇 (Yami) - Darkness
+
+The locations HIKARI Dominion/HIKARI Palace/HIKARI Villa,
+the character titles HIKARI Queen and HIKARI King all have
+their HIKARI component rendered in full-width, all-caps
+(ＨＩＫＡＲＩ) in the original JP text.
+
+The locations YAMI Dominion/YAMI Palace and character title
+YAMI Queen do not share this full-width rendering in the
+Japanese. However, I elected to use the all-caps anyway
+for some consistency between the two as the duality of
+Light & Dark seemed to lend itself to it. In addition, the
+YAMI Queen's counterpart, the Yami QUEEN (which, in JP, is
+indeed rendered as 闇のＱＵＥＥＮ), seemed more effective with
+the capitalization to provide contrast.
+---------------------------
+
+--- "The Long and short of things" ---
+
+A common, recurring phrase seen countless times throughout
+Enchant Farm whenever a new character is encountered and
+recruited to your side. Appears in several forms that I felt
+reflected each characters' way they might give someone a
+summary of the situation so far such as:
+
+"The long and short of things"
+"The quick and dirty version of the story"
+"A quick rundown"
+and more.
+
+かくかくしかじか (Kakukaku shikajika) is the phrase used for all
+instances of this in the original Japanese, which is approximately
+a "so-and-so-and-such-and-such" manner in which the characters
+tell the story of Kotoh/the adventure to far to prospective
+allies.
+
+There are times when this seems to be awkwardly jammed into
+the script even in the original JP. I have done my damndest to
+allay some of these issues in the EN, as the JP repeats one
+of a handful of dialogues that don't necessarily chain
+between dialogues in EN cleanly; thank you, context.
+---------------------------
+------------------------------------------------------
+
+
+--- Elementals / Materialized / Personified Characters ---
+
+An extremely common and recurring VIPRPG trope is
+personified, materialized versions of items, spells,
+and other things which are normally less concrete.
+
+Derived from "具体化" (gutaika) and "具現化" (gugenka) -
+embodiment, materialization, actualization, realization,
+taking form, taking shape
+
+Closely related to and, for the purposes of this document,
+more or less interchangeable with "擬人化" (gijikna)/personified/
+anthropomorphized characters.
+
+I have elected to disambiguate this on a character-type
+basis. Thus, Elemental magic characters will simply be
+referred to as "Elementals" while other types of characters
+based on other things may be referred to differently.
+---------------------------
+
+--- Elemental Character Names/Nicknames ---
+
+Elemental Magic characters are "officially" named after
+whatever spell they are based on. However, they are often
+called by abbreviated forms as well.
+
+Examples:
+Water I -> Watri/Wateri
+Wind I -> Windi
+Starlight I -> Lighti
+Burst I -> Bursti
+
+...and so forth.
+Yes, the -i is intentional and based on the Roman Numeral I.
+
+This is accurate to the Japanese nicknaming arrangement where
+Wind I -> ウィンディ (Windi) in terms of phonetics.
+
+...and so forth.
+
+Yes, this means some pretty unfortunate things for
+Darkness I's short name, but if you can't handle that,
+I don't know what to tell you.
+
+You could reasonably drop the -i and replace it with a 'y'
+but since this was clearly a deliberate choice by VIPPERs,
+it is difficult for me to argue y over i.
+
+Mileage varies on this, however, and the -y ending gets used
+fairly often. Unless explicitly written out -y in English and
+a core component of something, I'll tend to opt for the -i ending.
+
+Though this does not necessarily apply to Wind I Creator,
+the III-level spells have a similar naming wordplay theme.
+
+Wind III = ウィンドＩＩＩ = Wind San
+Wind III = ウィンドさん = Wind San
+Since 3 and the "san" honorific are both pronounced "san"
+there may be times when these characters are referred to
+interchangeably as one of several things:
+Mr/Ms/etc (Name)
+(Name) III
+(Name) Three
+All down to context and the exact usage in a given dialogue.
+
+More specific character nicknames/shorthand exist as well,
+depending on which series of magic is referred to. The best
+example is the Starlight series of Elementals.
+
+Starlight I -> Lighti (ライチ)
+Starlight II -> Two-Star (ニボシ, which is multi-level wordplay in and of
+itself. 煮干し->二星)
+---------------------------
+
+--- Burst I / Bursti ---
+
+An artist with a penchant for blowing things up.
+The tip of her beret serves as her literal fuse.
+
+One of the main heroines of Enchant Farm.
+---------------------------
+
+--- Flame I ---
+
+A Flame series elemental who fashions herself a
+Heian-era noble. In the Japanese, refers to herself
+as 麻呂 = Maro = I/me. This is not only a very old
+style way to refer to oneself, but pretty much gives
+away the fact that a character is an aristocrat.
+And, even more specifically, aristocracy from
+Japan's Heian era.
+
+The rendering of her English speech is meant to capture
+that same aristocratic sense without going too hard into
+"screw you, look it up yourself" direction.
+
+This is also reflected in her usage of the royal "We"
+in the English script at certain points. In the original
+JP text, she uses a form of self address 朕 (Chin) which is
+used by the Emperor in very much the same way.
+
+One of the main heroines of Enchant Farm.
+---------------------------
+
+--- Electro Barrier / Elekky ---
+
+JP Name: エレキバリア - Eleki Baria -> Eleki Barrier -> Electro Barrier
+Nicknames: エレキン (Elekin) エバリ (Ebari) キバリ (Kibari) and more.
+Went with a single unified nickname "Elekky"
+
+A lightning-Elemental who represents the physical
+embodiment of anti-lightning barrier magic.
+
+One of the main heroines of Enchant Farm.
+---------------------------
+
+--- Spark III ---
+
+The highest-level all-targeting lightning magic's
+embodied form.
+
+There is some debate as to Spark III's sex/gender
+even among Japanese VIPRPG fans, and even within
+individual games. Refers to themselves in a traditionally
+male fashion 僕 (Boku) which is also common for certain
+girls (ボクっ娘/Bokukko/Boku Gal) who run a gamut
+from "just uses boku because they can" all the way up to
+"hardcore tomboy."
+
+For the purposes of Enchant Farm, Spark III is treated
+by the game's code as female since they are clearly
+able to gain entry to certain gender-restricted locales.
+Thus, Spark III is referred to as a female for the very
+few lines where they are referred to in this fashion in
+Enchant Farm.
+---------------------------
+
+--- Water I ---
+
+The youngest and most popular of the Water sisters.
+Was not originally that popular, but people seem to have
+become endeared to her more and more with each passing
+VIPRPG festival, which helped her ascend from throwaway
+character to one who appears regularly in many games.
+
+By technicality, her sisters do appear in this game
+via her form change skills despite that Water I is
+only referred to as Water I regardless of her form.
+
+One of the main heroines of Enchant Farm.
+---------------------------
+
+--- Wind I / Windi ---
+
+One of the heroines of Enchant Farm.
+Normally a sickly character who spends many a day
+in the hospital, and particularly in this game.
+She could be said to be the physical manifestation
+of both Wind and the Common Cold. Thanks, Japanese.
+
+風 = Kaze = Wind
+風邪 = Kaze = Cold
+
+To deal with this wordplay, I occasionally render her description
+as the "physical manifestation of the Ill Wind." 
+
+Certain other VIPRPGs play up her illness more or less than others.
+
+Everybody loves Wind I.
+
+One of the main heroines of Enchant Farm.
+---------------------------
+
+--- Darkness I ---
+
+JP Name: ダークネスI (Darkness I)
+Commonly referred to as やみいち (Yami Ichi) and やみっち (Yamicchi).
+闇 = Yami = Darkness
+一 = Ichi = One
+市 = Ichi = Market
+There is wordplay in her nicknames which unfortunately is not
+easy to find an equivalent to in English, since Yamiichi is
+effectively both Dark 1 and Black Market.
+
+This has the unfortunate side effect of her abbreviated
+nickname being "Darki." (Dark I -> DarkI -> Darki).
+Unfortunate, but I'm not changing it.
+
+Yes, she engages in questionable avenues of commerce and is
+often shown to be willing to do any number of dark deeds
+for the sake of money.
+
+See games such as "Darkness I's Black Market Dungeon"
+(another EXCELLENT title by the creator of Enchant Farm)
+
+Is the protagonist AND villain in the famous VIPRPG
+Miruge "Stars and Lights."
+
+Portrayed as something of a Yandere in certain works, but
+a real hard worker who sometimes has trouble accepting
+help from others... unless she's the one explicitly
+demanding that they help her.
+
+One of the main heroines of Enchant Farm.
+---------------------------
+
+--- Leaf Barrier ---
+
+JP Name: リーフバリア (Leaf Barrier)
+Nicknames: リバリ (Libari/Ribari)
+Went with "Leafy" for her nickname.
+
+A barrier Elemental who was not originally part
+of the RPG Maker 2k/3 RTP, and was made after the
+fact to fill a void where such a barrier was
+needed.
+
+One of the main heroines of Enchant Farm.
+---------------------------
+
+--- Stone I ---
+
+JP Name: ストーンI (Stone I)
+Nickname "Stoni" in accordance with the traditional,
+aforementioned nicknaming patterns.
+
+The classic girl who hides her eyes behind her
+bangs and says very little, except to those she
+is comfortable speaking to.
+
+At various points in the EN script of Enchant Farm,
+she is seen using emotes such as smileys and even
+a Facebook-style thumbs up. This is all adapted from
+similar emotes used in the JP script including:
+^^
+><
+#
+b
+
+One of the main heroines of Enchant Farm.
+---------------------------
+
+--- Alex ---
+
+Default Hero character of RPG Maker 2000.
+
+Makes very few appearances in Enchant Farm,
+and is basically only used as part of the
+near-mandatory joke where Gomez is after him
+in a sexual way.
+---------------------------
+
+
+--- DL;OK ---
+Short for "Dark Lord; OK"
+
+DL;OK was chosen because of similar memetic shorthand
+such as TL;DR (too lazy, didn't read) and the like.
+
+Originally derived from "魔王把握" (Maou Haaku) which is the
+barest basic interaction possible between a protagonist and
+the King which kicks off a game. This is used as a noun as
+well as a verb at various times.
+
+If a game's main goal is not the Dark Lord, DL could be
+just about anything. An example of this can be seen in the
+very wonderful "Moshimon Quest Monsters" once the main quest
+is cleared.
+
+Long form:
+King
+"The Dark Lord has stolen our potato chips.
+ Go take care of him."
+
+Alex
+"Understood."
+
+Abbreviated form:
+King
+"Dark Lord."
+
+Alex
+"OK."
+
+Does not occur in any way, shape, or form in Enchant Farm.
+---------------------------
+
+--- Potato Chips ---
+
+A recurring macguffin seen in countless VIPRPGs.
+When these get stolen, it tends to kick off a DL;OK.
+
+Derived from "ポテチ" (Potechi) which is indeed
+POTAto CHIps abbreviated in a manner extremely common
+in the Japanese language.
+
+Barely, if at all, referred to in Enchant Farm.
+---------------------------
+
+--- Gomez ---
+
+Gay. Pirate. Enjoys buttfucking Alex.
+Yup. Many DL;OKs in shitpost games end with this.
+It's not always just Alex either.
+
+Makes a minor appearance in Enchant Farm.
+---------------------------
+
+--- Dark Lord Army / Team Dark Lord ---
+
+Derived from "魔王軍" (Maou Gun).
+
+Yes, I know it can be "Demon King" and other
+permutations. I went with Dark Lord.
+
+Army/Team are used interchangeably depending on the
+mood/tone/character speaking and other factors.
+
+Characters in this category include, but are not limited to:
+	Bosses/Big-wigs
+Dark Lord
+Dark Lord's Daughter (Mebius)
+Mrs. Dark Lord
+Lady Dark Lord (Female version of the Dark Lord himself)
+
+	Team Dark Lord Elite "Four" (Yes, there are 5)
+The Fifth Reaper
+Daero
+Dragonath
+Nin-Nin
+Musha
+
+	Lesser Characters
+Dragon/Li'l Dragon/Girl Dragon (Draco)
+Dragon Knight/Dragon Knightess
+Death Sheep
+Minotaur
+
+Other lesser characters/recurring monsters/etc
+appear as well.
+---------------------------
+
+--- Knigh Army / Team Knigh ---
+
+Derived from "ナイ軍" (Nai Gun).
+
+Yes, it is really "Knigh." Scroll down to the Monsters Section
+and view Undead Knigh further for proof.
+
+Characters in this category include, but are not limited to:
+	Bosses/Big-Wigs
+Undead Knigh
+Carbuncle
+Cait-Sith
+
+	Team Knigh Elite "Four" & Others
+The Fake 5th Reaper
+Fake Daero
+Fake Dark Elf
+2k3 Dark Elf
+Aubergonath
+Zan-Nin-Nin
+Fake Musha
+	
+	"Dark" versions of hero characters:
+Axel (Dark Alex)
+Erolia (Dark Lilia)
+Dark Daisy
+Diona (Dark Fiona)
+Dinux (Dark Linux)
+Dark Lenux
+
+Yeah, there's a LOT of characters.
+The 偽/fake/false characters are often, despite the title,
+fully-fledged characters in their own right and not just
+impostors/pale imitators. But that varies from work to work.
+---------------------------
+
+--- Undead Knigh ---
+
+RPG Maker 2k3 introduced a foe called
+アンデッドナイト "Undead Knight."
+
+RPG Maker 2k3 also has a 7 Japanese charater
+restriction for hero names.
+
+So, when people went to use him as a character, they
+had to call him アンデッドナイ, dropping the last letter,
+resulting in Undead Knigh. This stuck as a name.
+
+CONVENIENTLY similar restrictions in English 2k3 make
+it so that trying to name a character "Undead Knight"
+is ALSO one letter too long, resulting in "Undead Knigh."
+One of the rare moments where the translation writes itself.
+
+Entertainingly, his sword suffers from a similar naming
+thing (アンデッドソード->アンデッドソー) which itself STILL works in
+English.... sort of.
+
+(Undead Knigh's sword is a Rapier)
+Undead Rapier -> Undead Rapie
+
+Japanese simply calls it "Undead Sword" which would be
+"Undead Swor" and, while that is more entertaining,
+is not the same at all since shortening that word
+would be arbitrary rather than forced.
+
+Amusingly, the Undead Rapie does, in fact, appear as a
+weapon you can obtain in Enchant Farm.
+---------------------------
+
+--- Harpagon ---
+
+Harpy + Dragonath
+
+JP Name: ハーナス (Ha-nasu)
+Abbreviated/Fused form of HArpy + DragoNATH
+English name rendered as fused form of HARPy + DrAGONath
+
+If you can think of a better way to render this in
+English, I'm all ears, so please let me know in whatever
+thread you found this game.
+
+Don't ask how this works, but in various VIPRPG works
+Dragonath and Harpy are depicted a couple, and this monster
+is the resulting baby.
+---------------------------
+
+--- Mr. Batty ---
+
+Yes, same name as those from the Mother series games.
+---------------------------
+
+--- Cheer Penguin ---
+
+JP Name: もちべぺんぎん (Mochibe Pengin)
+Mochibe = Motivation
+
+People who don't possess sufficient Mochibe don't make it
+in time/at all to submit their VIPRPG Festival Entries.
+Insufficient motivation is the #1 cause of games going
+Eternal.
+---------------------------
+
+--- Nishiwaki Scizza ---
+
+JP Name: シーザー西脇 (Shi-za- Nishiwaki)
+Name could reasonably be rendered as "Caesar" but given
+that it's a crab with scissor-like claws, and a lack of
+evidence supporting that its name is Caesar, it's hard to
+justify such an angle. "Scizza" is meant to be prounounced
+like "scissor" in any case.
+
+A once-common and recurring ASCII art crab shitpost in dying
+VIPRPG dev threads. Though ASCII art hasn't fallen completely
+out of fashion on JP forums like it has on Western ones, its
+appearances aren't as frequent as it may have been before.
+Its appearance in VIPRPGs is also pretty infrequent, but
+this depends entirely on the creator's taste.
+
+(V) ∧_∧　(V)
+　　ヽ(＾ヮ＾)ノ　 "I'll snip ya to ribbons!"
+　　　ノ￣ゝ             
+---------------------------
+
+--- Aubergonath ---
+
+JP Name: ドラゴなすーん (Doragonasu-n)
+Dragonath + Nasu (Nasu = Eggplant/Aubergine)
+Hence: Aubergonath = AUBERgine + DraGONATH
+
+Yeah, that's the best I could come up with for the
+name.
+---------------------------
+
+--- Canael ---
+
+JP Name: カナエール (叶えーる) (Kanae-ru)
+Kanaeru = to grant/fulfill (a wish/request)
+
+English name rendered as it is to evoke that sort of
+Biblical, angelic sense. It's a god, after all.
+
+The polar opposite of Kotowaru.
+
+Originally found at the following website:
+http://ganbaruzo.fc2web.com/kanaesetu.html
+
+The website explains that Canael is a granter of
+wishes and goes into significant details about
+wishing guidelines.
+
+Per the website, the name/design are based on:
+
+>The name and meaning of Canael is based on the phrase "Negai wo Kanaeru (Canael)" (grant a wish)
+>The yellow star represents the power of success, development, and growth
+>The red heart represents the power of love and marriage
+>The blue V mark represents the power of victory
+>The smiling face represents the power of peace, cooperation, health, and harmony 
+---------------------------
+
+--- Kotowaru ---
+
+JP Name: コトワール (断ーる) (Kotowa-ru)
+Kotowaru = to deny (a wish/request)
+
+A straight up transliteration of the JP word "Kotowaru."
+Sadly sounds less biblical than it could, but the only other
+alternatives I could think of sounded kind of like crap and it's
+hard to swing making "denial" sound similar without making it look
+and sound strange. (Deniael? Just looks odd)
+
+The polar opposite of Canael.
+---------------------------
+
+--- Eternal/Nega-Eternal ---
+
+JP Name: エターナル (Eta-naru)
+Eternal
+
+The physical embodiment of the concept of "eternal."
+Derived from the VIPRPG verb エターなる which is a fusion of
+>eternal エター (Eta-)
+>become なる (Naru)
+
+When a game does not get completed, it goes eternally unfinished.
+Many submission pages for VIPRPGs do not feature download
+links to games, but instead read ETERNAL to denote that
+there was an attempt, but no finished product. Avoiding
+going eternal is the #1 goal of all VIPPERs.
+---------------------------
+
+--- Dragon ---
+
+Often speaks in a hip-hop/gangster style with
+Japanese full-width capitalized ＹＯＵ/ＹＯ as well as
+Japanese sentence-end particles (Na, Ne, Sa, Ze etc).
+
+This is crudely approximated in English with
+S P A C E D  typing,  Y O !
+
+Dragon is USUALLY the male RPG Maker 2000 RTP Dragon
+enemy in appearance, but often transforms into
+a diminutive girl dragon for various reasons.
+---------------------------
+
+--- Draco ---
+
+Derived from ドラ子 (Dorako -> Draco)
+Dora = Dragon, abbreviated.
+子 = Ko, Kanji for "child" but often a component of female
+names. Unfortunately some of this feminine image is lost
+on its way to English as Draco is traditionally a masculine
+sounding name, but what can you do?
+
+This is the female form of Dragon. Depending on the
+game, this can be a stand-alone character, or Dragon
+may transform into her.
+---------------------------
+
+--- Dragon Knightess ---
+
+JP Name: ドナ子 (Donako)
+Dona = Dragon Knight, abbreviated (DOragon NAito)
+子 = Ko, Kanji for "child" but often a component of female
+names.
+---------------------------
+
+--- Daero/Dark Elf ---
+
+Dark Elf who is a hentai/pervert.
+Dark Elf + Ero -> Dark Ero -> Daero.
+
+Those with background in other VIPRPGs are well aware
+of Daero's obsession with certain female characters,
+especially Helen.
+---------------------------
+
+--- The Fake 5th Reaper ---
+
+Japanese name: "偽死神五世" (Nise-Shinigami Gosei)
+The 五世 bit can be likened to a Roman Numeral V.
+5th is what I have chosen because it seems to work
+better in a name and avoids potential ambiguity
+(Reaper VEE? Reaper 5? Reaper THE FIFTH?).
+
+Nickname: "Kiri"
+---------------------------
+
+--- Trish ---
+
+Is best girl. Not originally from anything in particular,
+just kind of sprung up as a recurring character in the
+mid to late 2000s. I couldn't even tell you which game
+she first appeared in.
+
+Probably puts in more work than ANY of the other underworld
+characters combined, but who's keeping track?
+---------------------------
+
+--- Hell ---
+
+Queen of the Underworld.
+Her love of potato chips is a recurring character
+trait in various VIP works.
+---------------------------
+
+--- Mebius ---
+JP Name: メビウス (Mebiusu)
+
+The Dark Lord's daughter.
+
+Despite this, is often depicted as friends with
+Alex and Linux.
+
+Interchangeably called Mebius/Dark Lord's Daughter
+throughout VIP works. Shortened nickname in certain
+works (especially when hanging out with Linux)
+is "Meeby."
+
+Occasionally rendered as "Moebius," "Mobius," or
+"Möbius" depending on the work/creator. Indeed,
+the JP word メビウスの輪 (Mebiusu no Wa/Möbius Ring)
+is the correct technical terminology for this
+mathematical phenomenon.
+
+Also, I just prefer the "Mebius" rendering because of
+that god awful GBA Zone of the Enders title which
+features a character of the same name.
+---------------------------
+
+--- Moshimo Force ---
+
+JP Name: もしもの力 (Moshimo no Chikara)
+Moshimo = If...
+Chikara = Power
+
+Moshimo is a common VIPRPG game title component which
+means If... And so common, indeed, that it is
+nearly synonymous with VIPRPGs. There is, after all,
+a long-running series of games/story collections which are simply
+"Moshimo X ga Y dattara" (If X was Y).
+
+Moshimo Force is the ultimate power, the realized form of
+Moshimo. It is the power to blow away a foe with
+a single touch. Many a DL;OK ends with the hero simply
+touching the Dark Lord once and sending him careening
+off-screen, never to be seen again.

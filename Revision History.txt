@@ -1,0 +1,182 @@
+(Notice) - This patch contains all the changes committed to the project,
+so no matter what version of the game you are playing, this will always
+update it to the latest.
+Thank you to everyone who has reported issues, as this helps to bring
+this fabulous game nearer to its most perfect form.
+
+r16
+- Corrected boss Extra Effect "King's Glory" which erroneously
+  stated that attacks were always at least 75% effective, when
+  in reality it is 100%.
+- Clarified certain instances of the verbiage "EX Effect" to
+  "extra effect" to disambiguate it from "EX Skill" effects.
+  This was a holdover from certain skill descriptions which were
+  originally written under an assumption of less available space
+  for skill descriptions which at one point necessitated such
+  abbreviations, but the need for that was eliminated due to
+  UI/font adjustments.
+
+r15
+- Clarified and corrected skill description for Spirit Bless's
+  Fae Force passive skill. Previously it was misinterpreted to
+  state that it affects "all-targeting" Esper magic, when in
+  reality it applies a blanket 1.3x boost to any and all Esper
+  weapons and skills used by the party.
+  
+r14
+- Clarified instructions for certain Bonus Room dialogues.
+- Slight clarification to "Stat Drop" text when checking the
+  Ailment Info tab in the Options menu.
+- Corrected an errant instance of "Normal" type referring
+  to "Neutral" type.
+- Added an additional line of text to the tutorial message
+  when you first see a stat buff/debuff skill occur in battle
+  which explains that Neutral types are immune to stat
+  reductions. This line is absent in the original Japanese
+  text, but I felt it was important to include it.
+- Minor correction to a skill description where "Ice" type
+  was erroneously listed as "Frost" type.
+- Reworked wording of the "King's Breath" passive skill's
+  description for clarity. "Type% cannot be reduced" rather
+  than "Type% cannot go negative".
+- Other minor adjustments to skill descriptions for clarity.
+- Few minor text tweaks here and there.
+- Added the names of the types to the type chart to clarify
+  which ones are which in case anyone has trouble identifying
+  them based on the symbols the first time they see them.
+- Made extensive rewrites to the skill descriptions for both
+  Wind I's Survival Instinct and Quick Move's Emergency Dodge
+  skills to clarify what they do, as these are some of the
+  most confusing skills in the game even in the original
+  Japanese text due to a lack of context for what is defined
+  as the "lower limit for HIT%/accuracy". The changes made
+  may not be in the spirit of good translation, but as it is
+  with Quick Move's Overboost, I feel that clarity is better
+  than the alternative here.
+
+revision not constituting a numbered release (8/8/2024)
+- Appended EasyRPG Player info to the RPG_RT.ini file to
+  make sure the player is forced into the proper encoding,
+  as some users were presented with a Japanese naming
+  screen when selecting the name of the Teleport Fairy
+  or entering passwords for carry-over data. English
+  characters are still accessible from the Japanese
+  naming screen, but not all players may understand how
+  to do this.
+
+r13
+- Minor text tweaks.
+
+r12
+- Corrected a line where Leaf Barrier's name was incorrectly
+  written as "Recovery Barrier" as she identifies herself to
+  Flame I.
+- Corrected inconsistent revert message for Starlight I's
+  Body Taker skill, which was listed as [Give Me Your Body!]
+
+r11
+- Minor revisions to certain skill descriptions for clarity.
+- Corrected certain skill name images that were inconsistent
+  with the names in equipment descriptions when inspected from
+  the equipment list. Such as:
+  Hell Edge -> Dusk Blade
+  Klapti Blood -> Skill Drain
+  Life Absolute -> Dogma Blade
+  The latter two are actually incorrect and inconsistent
+  in the Japanese version itself, so I debated whether I
+  should change them so they match, but ultimately I did.
+  It had bothered me for some time.
+
+r10
+- Minor corrections to certain enemy skill names.
+- Minor correction to an "Extra Effect" name.
+- Minor clarification of Hardcore difficulty's description.
+- Completely rewrote Quick Move's "Overboost" skill description
+  to provide clearer information about how it works. I suspect
+  that the original Japanese description's vagueness was due to a
+  lack of available space for the description, which led players to a
+  poor understanding of how it works by never specifying what the
+  "multiple" is that Quick Move gains extra attacks based on.
+  Description now clearly and plainly states that while Overboost
+  is active, Quick Move attacks (User's AGI)/(Foe's AGI) times.
+  Also states the hard cap of 5 hits, and clarifies that Overboost
+  does not take into account AGI buffs/debuffs when calculating how many
+  extra attacks will be performed. Neither of the latter clarifications
+  are written anywhere in the original Japanese skill description,
+  necessitating either blind experimentation, consulting the wiki,
+  or datamining the game, neither of which should be required to
+  understand how a skill works.
+  I have debated a long time about whether to do something like this,
+  but I have ultimately decided that regardless of whether this is in
+  the spirit of good translation, it is more important that the player
+  has a complete understanding of how Overboost functions than for the
+  text to read exactly to the letter of the original Japanese description.
+
+r9
+- Clarified an extremely poorly worded skill description for the [Virus]
+  skill, ensuring that it is abundantly clear how it functions.
+  (If attacking a foe with something they would normally be immune to,
+   Virus disregards the immunity entirely, allowing attacks to deal damage
+   that would otherwise do nothing. In addition, completely disregards
+   foes' status resistances, allowing statuses to affect them which they
+   would normally be immune to, such as Poison to a Steel type.)
+- Clarified Wind I Greatsword's [Wind of Death] skill by specifying that
+  the downsides being negated are those of the skills [Big Sword] and
+  [Superhuge Sword], rather than saying that the downsides being negated
+  were inherent to "Greatswords and Huge Swords."
+- Clarified the "Type Matchup Chart" message so as not to confuse players.
+  The original text stated "X Axis: Attacker  Y Axis: Defender" which was
+  exactly what the original Japanese text stated.
+  The updated text states "Y Axis: Attacker  X Axis: Defender" now.
+  The assumption of the original text was apparently that players would
+  imagine a cross on the chart and reference the types on the imaginary
+  lines of that cross. Few western players would assume this to be the
+  case, however, necessitating this change.
+
+r8
+- Corrected a translation miss on the Crystal Atelier's short description
+  of the Crystal Guard which incorrectly stated that it "bears" the types of
+  Ghost and Earth, when in reality it "responds to" them (its synthesis
+  options are Ghost and Earth magicite).
+
+r7
+- Corrected an outright miss on my end where Ingrid's rewards were mis-TL'd
+  as "Water Magicite Gem(s)" when in reality they are "Crystal Gem(s)"
+
+r6
+- Added a corrected valid name for the Darkness I's Black Market Dungeon
+  carryover check, but still left in one that is "wrong" for the benefit
+  of those who might check Enchant Farm's atwiki page and google translate
+  it to get the answer.
+- Corrected Blind's character glossary/base stats graphic, as it had
+  an old placeholder icon for the Normal/Neutral type.
+
+r5
+- Corrected discrepancy between Starlight I's "Mahanma" skill and the
+  one she uses in battle "Mahama" as both should have been Mahama.
+- Corrected a slight grammatical error with a fairy dialogue where
+  there was a singular/plural disagreement between 2 text boxes.
+
+r4
+- Corrected error in "Power Charge" skill description, which mis-stated
+  a STR increase of 2 stages rather than 1. This accounts for both the
+  in-game text as well as the text image.
+- Changed the name of an enemy skill "Sagaku Sword" to "Differential Cut"
+  to convey the idea of what the move actually does rather than leaving it
+  in "awesome cool" sounding Japanese. Note that this skill is given the
+  name "Minus Strike" where it appears in Final Fantasy IX.
+- Changed the name of an enemy skill "Tail Wag" to "Tail Whip" as it is
+  meant to be a direct reference to the Pokemon move of the same name.
+- Slight edit to battle text that indicates that the player's healing
+  water has evaporated to say "Your" healing water rather than "The"
+  healing water
+
+r3
+- Stone I's "Build Up" skill image was incorrectly listed as "Power Up"
+  and was inconsistent with its seal/unseal message.
+
+r2
+- Fixed text color code error present in another skill description.
+
+r1
+- Corrected ambugious wording of Water I's "Normal Guard" skill.

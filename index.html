@@ -1,0 +1,563 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EasyRPG Player</title>
+  <script>
+    const gamename = 'ENCHANTFARM';
+    window.onload = function () {
+      if (!window.location.search.includes('game=' + gamename)) {
+        var newUrl = window.location.href.split('?')[0] + '?game=' + gamename;
+        window.history.replaceState({}, '', newUrl);
+      }
+    };
+  </script>
+  <style>
+    :root {
+      --color-gray: hsl(0, 0%, 55%);
+      --controls-size: 10vh;
+    }
+
+    @media (orientation: landscape) {
+      :root {
+        --controls-size: 20vh;
+      }
+    }
+
+    html {
+      touch-action: none;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+      margin: 0;
+      color: white;
+      background: black;
+    }
+
+    .unselectable {
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      user-select: none;
+    }
+
+    #status {
+      font-size: 1.5rem;
+      color: var(--color-gray);
+      text-align: center;
+    }
+
+    #controls {
+      position: relative;
+      text-align: right;
+      z-index: 10;
+    }
+
+    #controls button {
+      -webkit-appearance: button;
+      display: inline-flex;
+      background: transparent;
+      border: 0;
+      color: white;
+      font-family: inherit;
+      font-size: 1em;
+      line-height: inherit;
+      cursor: pointer;
+      padding: 0.5rem;
+    }
+
+    #controls svg {
+      pointer-events: none;
+    }
+
+    #canvas {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 100%;
+      height: 100%;
+      border: 0;
+      image-rendering: pixelated;
+      image-rendering: crisp-edges;
+      transform: translate(-50%, -50%);
+    }
+
+    img#canvas {
+      object-fit: contain;
+    }
+
+    #dpad,
+    #apad {
+      position: fixed;
+      bottom: 1rem;
+    }
+
+    #dpad {
+      left: 1rem;
+    }
+
+    #apad {
+      right: 1rem;
+    }
+
+    #dpad svg {
+      width: calc(2 * var(--controls-size));
+      height: calc(2 * var(--controls-size));
+      fill: var(--color-gray);
+    }
+
+    #dpad svg rect {
+      opacity: 0.4;
+    }
+
+    #apad>* {
+      width: var(--controls-size);
+      height: var(--controls-size);
+      background-color: var(--color-gray);
+      border-radius: 50%;
+    }
+
+    #apad> :last-child {
+      position: relative;
+      right: var(--controls-size);
+    }
+
+    #dpad path:not(.active),
+    #apad>*:not(.active) {
+      opacity: 0.4;
+    }
+
+    /* New */
+
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.4);
+    }
+
+    .modal-content-controls {
+      background-color: #070707;
+      margin: 15% auto;
+      padding: 20px;
+      border: 1px solid #888;
+      width: 80%;
+      max-width: 600px;
+    }
+
+    .close {
+      color: #aaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .close:hover,
+    .close:focus {
+      color: rgb(228, 20, 20);
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    #controlsText {
+      white-space: pre-wrap;
+      word-wrap: break-word;
+      font-family: monospace;
+    }
+
+    /* Newer */
+
+    .modal-content-credits {
+      background-color: #000000;
+      margin: 1% auto;
+      padding: 20px;
+      border: 1px solid #888;
+      width: 80%;
+      /* max-height: 80vh; */
+      overflow-y: auto;
+    }
+
+    .blockquote {
+      border: 1px solid white;
+      padding: 10px;
+      margin: 10px 0;
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    /* End New */
+  </style>
+</head>
+
+<body>
+  <div id="controls">
+    <button id="controls-fullscreen" class="unselectable">
+      <svg viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg" width="25" height="25">
+        <path
+          d="M13.5 13.5H10m3.5 0V10m0 3.5l-4-4m.5-8h3.5m0 0V5m0-3.5l-4 4M5 1.5H1.5m0 0V5m0-3.5l4 4m-4 4.5v3.5m0 0H5m-3.5 0l4-4"
+          stroke="currentColor"></path>
+      </svg>
+    </button>
+  </div>
+
+  <!-- New -->
+  <div id="controls">
+    <img
+      src="data:image/svg+xml;base64,PHN2ZyB2aWV3Ym94PSIwIDAgMTUgMTUiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjI1IiBoZWlnaHQ9IjI1Ij48cGF0aCBkPSJNMTMuNSAxMy41SDEwbTMuNSAwVjEwbTAgMy41bC00LTRtLjUtOGgzLjVtMCAwVjVtMC0zLjVsLTQgNE01IDEuNUgxLjVtMCAwVjVtMC0zLjVsNCA0bS00IDQuNXYzLjVtMCAwSDVtLTMuNSAwbDQtNCIgc3Ryb2tlPSJjdXJyZW50Q29sb3IiPjwvcGF0aD48L3N2Zz4="
+      alt="Controls">
+    <button id="showControls">Controls</button>
+  </div>
+
+  <div id="controlsModal" class="modal">
+    <div class="modal-content-controls">
+      <span class="close">&times;</span>
+      <h2>Game Controls</h2>
+      <pre id="controlsText"></pre>
+    </div>
+  </div>
+
+  <div id="controls">
+    <img
+      src="data:image/svg+xml;base64,PHN2ZyB2aWV3Ym94PSIwIDAgMTUgMTUiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjI1IiBoZWlnaHQ9IjI1Ij48cGF0aCBkPSJNMTMuNSAxMy41SDEwbTMuNSAwVjEwbTAgMy41bC00LTRtLjUtOGgzLjVtMCAwVjVtMC0zLjVsLTQgNE01IDEuNUgxLjVtMCAwVjVtMC0zLjVsNCA0bS00IDQuNXYzLjVtMCAwSDVtLTMuNSAwbDQtNCIgc3Ryb2tlPSJjdXJyZW50Q29sb3IiPjwvcGF0aD48L3N2Zz4="
+      alt="Controls">
+    <button id="showCredits">Credits</button>
+  </div>
+
+  <div id="creditsModal" class="modal">
+    <div class="modal-content-credits">
+      <span class="close">&times;</span>
+      <h2>Credits</h2>
+      <div id="creditsContent"></div>
+    </div>
+  </div>
+
+  <script>
+
+    const showControlsButton = document.getElementById('showControls');
+    const modal = document.getElementById('controlsModal');
+    const closeButton = modal.querySelector('.close');
+    const controlsText = document.getElementById('controlsText');
+
+    var controls = "";
+    fetch('controls.txt')
+      .then(response => response.text())
+      .then(text => {
+        controls = text;
+      })
+      .catch(error => console.error('Error loading controls:', error));
+
+    function displayControls() {
+      controlsText.textContent = controls;
+      modal.style.display = 'block';
+    }
+
+    function closeModal() {
+      modal.style.display = 'none';
+    }
+
+    showControlsButton.addEventListener('click', displayControls);
+    closeButton.addEventListener('click', closeModal);
+
+    window.addEventListener('click', (event) => {
+      if (event.target === modal) {
+        closeModal();
+      }
+    });
+
+    modal.style.display = 'none';
+
+  </script>
+
+  <script>
+
+    var creditsModal = document.getElementById("creditsModal");
+    var creditsBtn = document.getElementById("showCredits");
+    var creditsSpan = creditsModal.querySelector(".close");
+    var creditsContent = document.getElementById("creditsContent");
+
+    creditsBtn.onclick = function () {
+      creditsModal.style.display = "block";
+
+      fetch('README.md')
+        .then(response => response.text())
+        .then(data => {
+          var html = data
+            .replace(/^# (.*$)/gim, '<h1>$1</h1>')
+            .replace(/^## (.*$)/gim, '<h2>$1</h2>')
+            .replace(/^### (.*$)/gim, '<h3>$1</h3>')
+            .replace(/\*\*(.*)\*\*/gim, '<strong>$1</strong>')
+            .replace(/\*(.*)\*/gim, '<em>$1</em>')
+            .replace(/\[(.*?)\]\((.*?)\)/gim, '<a href="$2">$1</a>')
+            // Group consecutive blockquotes
+            .replace(/(^>.*$\n?)+/gim, function (match) {
+              return '<div class="blockquote">' + match.replace(/^>/gm, '') + '</div>';
+            })
+            .replace(/\n/gim, '<br>');
+
+          creditsContent.innerHTML = html;
+        })
+        .catch(error => {
+          console.error('Error:', error);
+          creditsContent.innerHTML = 'Error loading credits.';
+        });
+    }
+
+    creditsSpan.onclick = function () {
+      creditsModal.style.display = "none";
+    }
+
+    window.onclick = function (event) {
+      if (event.target == controlsModal) {
+        controlsModal.style.display = "none";
+      }
+      if (event.target == creditsModal) {
+        creditsModal.style.display = "none";
+      }
+    }
+  </script>
+
+  <!-- End New -->
+
+  <div id="status"></div>
+
+  <div id="viewport">
+    <canvas id="canvas" tabindex="-1" class="unselectable"></canvas>
+
+    <div id="dpad" class="unselectable">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72 72">
+        <path id="dpad-up" data-key="ArrowUp" d="M48,5.8C48,2.5,45.4,0,42,0H29.9C26.6,0,24,2.4,24,5.8V24h24V5.8z" />
+        <path id="dpad-right" data-key="ArrowRight"
+          d="M66.2,24H48v24h18.2c3.3,0,5.8-2.7,5.8-6V29.9C72,26.5,69.5,24,66.2,24z" />
+        <path id="dpad-down" data-key="ArrowDown" d="M24,66.3c0,3.3,2.6,5.7,5.9,5.7H42c3.3,0,6-2.4,6-5.7V48H24V66.3z" />
+        <path id="dpad-left" data-key="ArrowLeft" d="M5.7,24C2.4,24,0,26.5,0,29.9V42c0,3.3,2.3,6,5.7,6H24V24H5.7z" />
+        <rect id="dpad-center" x="24" y="24" width="24" height="24" />
+      </svg>
+    </div>
+
+    <div id="apad" class="unselectable">
+      <div id="apad-escape" data-key="Escape"></div>
+      <div id="apad-enter" data-key="Enter"></div>
+    </div>
+  </div>
+
+  <script async type="text/javascript" src="index.js"></script>
+
+  <script>
+    const hasTouchscreen = window.matchMedia('(hover: none), (pointer: coarse)').matches;
+    const preventNativeKeys = ['ArrowUp', 'ArrowDown', 'ArrowRight', 'ArrowLeft', ' ', 'F12'];
+    const keys = new Map();
+    const keysDown = new Map();
+    const canvas = document.getElementById('canvas');
+    let easyrpgPlayer;
+    let lastTouchedId;
+
+    // Launch the Player and configure it
+    window.addEventListener('load', (event) => {
+      createEasyRpgPlayer({
+        game: undefined,
+        saveFs: undefined
+      }).then(function (Module) {
+        // Module is ready
+        easyrpgPlayer = Module;
+        easyrpgPlayer.initApi();
+        canvas.focus();
+
+        // Custom code here
+      });
+    });
+
+    // Make EasyRPG player embeddable
+    canvas.addEventListener('mouseenter', () => canvas.focus());
+    canvas.addEventListener('click', () => canvas.focus());
+
+    // Handle clicking on the fullscreen button
+    document.querySelector('#controls-fullscreen').addEventListener('click', () => {
+      const viewport = document.getElementById('viewport');
+      if (viewport.requestFullscreen) {
+        viewport.requestFullscreen();
+      }
+    });
+
+    /**
+     * Simulate a keyboard event on the emscripten canvas
+     *
+     * @param {string} eventType Type of the keyboard event
+     * @param {string} key Key to simulate
+     */
+    function simulateKeyboardEvent(eventType, key) {
+      const event = new Event(eventType, { bubbles: true });
+      event.code = key;
+
+      canvas.dispatchEvent(event);
+    }
+
+    /**
+     * Simulate a keyboard input from `keydown` to `keyup`
+     *
+     * @param {string} key Key to simulate
+     */
+    function simulateKeyboardInput(key) {
+      simulateKeyboardEvent('keydown', key);
+      window.setTimeout(() => {
+        simulateKeyboardEvent('keyup', key);
+      }, 100);
+    }
+
+    /**
+     * Bind a node by a specific key to simulate on touch
+     *
+     * @param {*} node The node to bind a key to
+     * @param {string} key Key to simulate
+     */
+    function bindKey(node, key) {
+      keys.set(node.id, key);
+
+      node.addEventListener('touchstart', event => {
+        event.preventDefault();
+        simulateKeyboardEvent('keydown', key);
+        keysDown.set(event.target.id, node.id);
+        node.classList.add('active');
+      });
+
+      node.addEventListener('touchend', event => {
+        event.preventDefault();
+
+        const pressedKey = keysDown.get(event.target.id);
+        if (pressedKey && keys.has(pressedKey)) {
+          const key = keys.get(pressedKey);
+          simulateKeyboardEvent('keyup', key);
+        }
+
+        keysDown.delete(event.target.id);
+        node.classList.remove('active');
+
+        if (lastTouchedId) {
+          document.getElementById(lastTouchedId).classList.remove('active');
+        }
+      });
+
+      // Inspired by https://github.com/pulsejet/mkxp-web/blob/262a2254b684567311c9f0e135ee29f6e8c3613e/extra/js/dpad.js
+      node.addEventListener('touchmove', event => {
+        const { target, clientX, clientY } = event.changedTouches[0];
+        const origTargetId = keysDown.get(target.id);
+        const nextTargetId = document.elementFromPoint(clientX, clientY).id;
+        if (origTargetId === nextTargetId) return;
+
+        if (origTargetId) {
+          const key = keys.get(origTargetId);
+          simulateKeyboardEvent('keyup', key);
+          keysDown.delete(target.id);
+          document.getElementById(origTargetId).classList.remove('active');
+        }
+
+        if (keys.has(nextTargetId)) {
+          const key = keys.get(nextTargetId);
+          simulateKeyboardEvent('keydown', key);
+          keysDown.set(target.id, nextTargetId);
+          lastTouchedId = nextTargetId;
+          document.getElementById(nextTargetId).classList.add('active');
+        }
+      })
+    }
+
+    /** @type {{[key: number]: Gamepad}} */
+    let gamepads = {};
+    const haveEvents = 'ongamepadonnected' in window;
+
+    function addGamepad(gamepad) {
+      if (gamepad == undefined) {
+        return;
+      }
+      gamepads[gamepad.index] = gamepad;
+      updateTouchControlsVisibility();
+    }
+
+    function removeGamepad(gamepad) {
+      if (gamepad == undefined) {
+        return;
+      }
+      delete gamepads[gamepad.index];
+      updateTouchControlsVisibility();
+    }
+
+    /** @returns {Gamepad[]} */
+    function getGamepads() {
+      var pads = navigator.getGamepads ? navigator.getGamepads() : (navigator.webkitGetGamepads ? navigator.webkitGetGamepads() : []);
+      return pads;
+    }
+
+    function scanGamePads() {
+      var pads = getGamepads();
+      for (var i = 0; i < pads.length; i++) {
+        if (pads[i]) {
+          if (pads[i].index in gamepads) {
+            gamepads[pads[i].index] = pads[i];
+          } else {
+            addGamepad(pads[i]);
+          }
+        }
+      }
+    }
+
+    if (!haveEvents) {
+      setInterval(scanGamePads, 500);
+    }
+
+    window.addEventListener('gamepadconnected', function (e) {
+      addGamepad(e.gamepad);
+    });
+
+    window.addEventListener('gamepaddisconnected', function (e) {
+      removeGamepad(e.gamepad);
+    })
+
+    function updateTouchControlsVisibility() {
+      if (hasTouchscreen && Object.keys(gamepads).length === 0) {
+        for (const elem of document.querySelectorAll('#dpad, #apad')) {
+          elem.style.display = '';
+        }
+      } else {
+        // If we don't have a touch screen, OR any gamepads are connected...
+        for (const elem of document.querySelectorAll('#dpad, #apad')) {
+          // Hide the touch controls
+          elem.style.display = 'none';
+        }
+      }
+    }
+
+    // Bind all elements providing a `data-key` attribute with the
+    // given key on touch-based devices
+    if (hasTouchscreen) {
+      for (const button of document.querySelectorAll('[data-key]')) {
+        bindKey(button, button.dataset.key);
+      }
+    } else {
+      // Prevent scrolling when pressing specific keys
+      window.addEventListener('keydown', event => {
+        if (preventNativeKeys.includes(event.key)) {
+          event.preventDefault();
+        }
+      });
+
+      canvas.addEventListener('contextmenu', event => {
+        event.preventDefault();
+        // simulateKeyboardInput('Escape', 27);
+      });
+
+      // canvas.addEventListener('click', () => {
+      //   simulateKeyboardInput('Enter', 13);
+      // });
+    }
+
+    updateTouchControlsVisibility();
+  </script>
+
+</body>
+
+</html>

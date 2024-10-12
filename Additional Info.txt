@@ -1,0 +1,37 @@
+Greetings, and thank you for downloading another
+entry in the /vrpg/ Exclusives collection.
+
+Please run the game using either the start.exe or
+start_window.exe files included in here. Alternatively,
+you may choose to run the RPG_RT.exe in the game folder
+directly. As a final alternative, this game is fully
+compatible with EasyRPG which can be downloaded at the
+following link:
+
+https://easyrpg.org/player/downloads/
+
+Simply download the player that works for your system
+and drop it into the game folder, then run EasyRPG.exe
+directly.
+
+Enchant Farm is largely considered one of the top VIPRPG
+JRPGs in terms of sheer gameplay and dominated forums
+for the latter half of the 2010s where RPG Maker games
+are discussed in Japanese circles. It is my hope that
+you enjoy this game as much as they did, and indeed,
+as much as I have enjoyed it.
+
+If you spot any typos or feel that something has been
+translated incorrectly, please feel free to go to the
+/vrpg/ board of 4channel.org and find any RPG Maker
+thread, then simply make a post about it there, and
+attach a screenshot of the issue. For translation
+issues in particular, if at all possible, please
+provide a compelling argument why my translation was
+incorrect/poor, and suggest a correction.
+
+If you encounter any bugs, crashes, or other issues
+that hinder your enjoyment of the game, please do
+the same described above.
+
+- /vrpg/ honyaku R&D
