@@ -207,6 +207,32 @@
   </div>
 
   <!-- New -->
+
+  <div id="controls">
+    <img
+      src="data:image/svg+xml;base64,PHN2ZyB2aWV3Ym94PSIwIDAgMTUgMTUiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjI1IiBoZWlnaHQ9IjI1Ij48cGF0aCBkPSJNMTMuNSAxMy41SDEwbTMuNSAwVjEwbTAgMy41bC00LTRtLjUtOGgzLjVtMCAwVjVtMC0zLjVsLTQgNE01IDEuNUgxLjVtMCAwVjVtMC0zLjVsNCA0bS00IDQuNXYzLjVtMCAwSDVtLTMuNSAwbDQtNCIgc3Ryb2tlPSJjdXJyZW50Q29sb3IiPjwvcGF0aD48L3N2Zz4="
+      alt="Controls">
+    <button id="showSavbonus">SAVE BONUS!</button>
+  </div>
+
+  <div id="savbonusModal" class="modal">
+    <div class="modal-content-credits">
+      <span class="close">&times;</span>
+      <h2>WIND I Save Bonus</h2>
+      <p id="savbonusText">
+        This game has a save bonus if you have a cleared save from <a
+          href="https://makerburns.github.io/WINDICREATOR-Web-Player/">WIND I CREATOR</a>.<br>
+        You can <a href="https://makerburns.github.io/ENCHANTFARM-Web-Player/?game=WINDI">click here</a> to reopen this
+        game using the WIND I CREATOR savespace.<br>
+        From there you can keep using that savespace if you don't mind overwriting your saves for that game.<br>
+        Alternatively you can download your save after creating it and upload it after loading the game with the usual
+        link.<br>
+        (I dont't have a clear WIND I save to test this, if you try this email me at <b>burnered18@gmail.com</b> and
+        tell me how it goes).
+      </p>
+    </div>
+  </div>
+
   <div id="controls">
     <img
       src="data:image/svg+xml;base64,PHN2ZyB2aWV3Ym94PSIwIDAgMTUgMTUiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjI1IiBoZWlnaHQ9IjI1Ij48cGF0aCBkPSJNMTMuNSAxMy41SDEwbTMuNSAwVjEwbTAgMy41bC00LTRtLjUtOGgzLjVtMCAwVjVtMC0zLjVsLTQgNE01IDEuNUgxLjVtMCAwVjVtMC0zLjVsNCA0bS00IDQuNXYzLjVtMCAwSDVtLTMuNSAwbDQtNCIgc3Ryb2tlPSJjdXJyZW50Q29sb3IiPjwvcGF0aD48L3N2Zz4="
@@ -236,6 +262,48 @@
       <div id="creditsContent"></div>
     </div>
   </div>
+
+  <div id="controls">
+    <img
+      src="data:image/svg+xml;base64,PHN2ZyB2aWV3Ym94PSIwIDAgMTUgMTUiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjI1IiBoZWlnaHQ9IjI1Ij48cGF0aCBkPSJNMTMuNSAxMy41SDEwbTMuNSAwVjEwbTAgMy41bC00LTRtLjUtOGgzLjVtMCAwVjVtMC0zLjVsLTQgNE01IDEuNUgxLjVtMCAwVjVtMC0zLjVsNCA0bS00IDQuNXYzLjVtMCAwSDVtLTMuNSAwbDQtNCIgc3Ryb2tlPSJjdXJyZW50Q29sb3IiPjwvcGF0aD48L3N2Zz4="
+      alt="Controls">
+    <button id="showGamelist">Game List</button>
+  </div>
+
+  <div id="gamelistModal" class="modal">
+    <div class="modal-content-controls">
+      <span class="close">&times;</span>
+      <h2>List of Uploaded Games</h2>
+      <p id="gamelistText">
+        You can find a list of all uploaded games <a href="https://makerburns.github.io/Game-List/">by clicking this link</a>.
+      </p>
+    </div>
+  </div>
+
+  <script>
+    const showSavbonusButton = document.getElementById('showSavbonus');
+    const sbmodal = document.getElementById('savbonusModal');
+    const sbcloseButton = sbmodal.querySelector('.close');
+
+    function displaySaveBonus() {
+      sbmodal.style.display = 'block';
+    }
+
+    function closesbModal() {
+      sbmodal.style.display = 'none';
+    }
+
+    showSavbonusButton.addEventListener('click', displaySaveBonus);
+    sbcloseButton.addEventListener('click', closesbModal);
+
+    window.addEventListener('click', (event) => {
+      if (event.target === sbmodal) {
+        closesbModal();
+      }
+    });
+
+    sbmodal.style.display = 'none';
+  </script>
 
   <script>
 
@@ -320,6 +388,30 @@
         creditsModal.style.display = "none";
       }
     }
+  </script>
+
+  <script>
+    const showGamelistButton = document.getElementById('showGamelist');
+    const gamelistModal = document.getElementById('gamelistModal');
+    const closeGamelistButton = gamelistModal.querySelector('.close');
+
+    function displayGamelist() {
+      gamelistModal.style.display = 'block';
+    }
+
+    function closeGamelistModal() {
+      gamelistModal.style.display = 'none';
+    }
+
+    showGamelistButton.addEventListener('click', displayGamelist);
+    closeGamelistButton.addEventListener('click', closeGamelistModal);
+
+    window.addEventListener('click', (event) => {
+      if (event.target === gamelistModal) {
+        closeGamelistModal();
+      }
+    });
+    gamelistModal.style.display = 'none';
   </script>
 
   <!-- End New -->
