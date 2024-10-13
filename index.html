@@ -8,7 +8,7 @@
   <script>
     const gamename = 'ENCHANTFARM';
     window.onload = function () {
-      if (!window.location.search.includes('game=' + gamename)) {
+      if (!window.location.search.includes('game=' + gamename) && !window.location.search.includes('game=' + 'WINDI')) {
         var newUrl = window.location.href.split('?')[0] + '?game=' + gamename;
         window.history.replaceState({}, '', newUrl);
       }
