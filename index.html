@@ -112,16 +112,55 @@
       opacity: 0.4;
     }
 
-    #apad>* {
+    #apad>*:not(#apad-shift) {
       width: var(--controls-size);
       height: var(--controls-size);
       background-color: var(--color-gray);
       border-radius: 50%;
+      line-height: var(--controls-size);
+      text-align: center;
     }
 
-    #apad> :last-child {
+    #apad-enter {
       position: relative;
       right: var(--controls-size);
+    }
+
+    #apad-enter::after {
+      content: "Z";
+      pointer-events: none;
+      font-size: calc(var(--controls-size) * 0.35);
+      font-weight: bold;
+      color: black;
+    }
+
+    #apad-escape::after {
+      content: "X";
+      pointer-events: none;
+      font-size: calc(var(--controls-size) * 0.35);
+      font-weight: bold;
+      color: black;
+    }
+
+    #apad-shift {
+      position: fixed;
+      bottom: calc(2rem + var(--controls-size) * 2);
+      right: 1rem;
+      width: calc(var(--controls-size) * 2) !important;
+      height: calc(var(--controls-size) * 0.6) !important;
+      border-radius: 12px !important;
+      background-color: var(--color-gray);
+      display: flex !important;
+      align-items: center;
+      justify-content: center;
+      font-size: calc(var(--controls-size) * 0.28);
+      font-weight: bold;
+      color: black;
+    }
+
+    #apad-shift::after {
+      content: "SHIFT";
+      pointer-events: none;
     }
 
     #dpad path:not(.active),
@@ -191,6 +230,58 @@
       background-color: rgba(255, 255, 255, 0.1);
     }
 
+    /* Mobile hamburger menu */
+    #mobile-menu-btn {
+      display: none;
+      position: fixed;
+      top: 0;
+      right: 2.5rem;
+      z-index: 20;
+      background: transparent;
+      border: 0;
+      color: white;
+      font-size: 1em;
+      cursor: pointer;
+      padding: 0.5rem;
+    }
+
+    #mobile-menu-btn svg {
+      pointer-events: none;
+    }
+
+    #mobile-dropdown {
+      display: none;
+      position: fixed;
+      top: 2.5rem;
+      right: 0.5rem;
+      z-index: 20;
+      background: #111;
+      border: 1px solid #555;
+      min-width: 150px;
+    }
+
+    #mobile-dropdown button {
+      display: block;
+      width: 100%;
+      background: transparent;
+      border: 0;
+      border-bottom: 1px solid #333;
+      color: white;
+      font-family: inherit;
+      font-size: 1em;
+      text-align: left;
+      padding: 0.75rem 1rem;
+      cursor: pointer;
+    }
+
+    #mobile-dropdown button:last-child {
+      border-bottom: 0;
+    }
+
+    #mobile-dropdown button:active {
+      background: #333;
+    }
+
     /* End New */
   </style>
 </head>
@@ -204,6 +295,16 @@
           stroke="currentColor"></path>
       </svg>
     </button>
+  </div>
+
+  <!-- Mobile hamburger menu (shown only on touchscreen) -->
+  <button id="mobile-menu-btn" class="unselectable">
+    <svg viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg" width="25" height="25">
+      <path d="M1.5 3h12M1.5 7.5h12M1.5 12h12" stroke="currentColor" stroke-linecap="round"/>
+    </svg>
+  </button>
+
+  <div id="mobile-dropdown">
   </div>
 
   <!-- New -->
@@ -414,6 +515,44 @@
     gamelistModal.style.display = 'none';
   </script>
 
+  <script>
+    // Mobile hamburger menu - only activate on touchscreen
+    if (window.matchMedia('(hover: none), (pointer: coarse)').matches) {
+      const allControlDivs = document.querySelectorAll('#controls');
+      const menuBtn = document.getElementById('mobile-menu-btn');
+      const dropdown = document.getElementById('mobile-dropdown');
+
+      // Auto-build dropdown from existing control buttons, skipping fullscreen (index 0)
+      allControlDivs.forEach((div, i) => {
+        if (i === 0) return;
+        div.style.display = 'none';
+        const btn = div.querySelector('button');
+        if (!btn) return;
+        const menuItem = document.createElement('button');
+        menuItem.textContent = btn.textContent;
+        menuItem.addEventListener('click', () => {
+          dropdown.style.display = 'none';
+          btn.click();
+        });
+        dropdown.appendChild(menuItem);
+      });
+
+      // Show the hamburger button
+      menuBtn.style.display = 'block';
+
+      // Toggle dropdown on hamburger click
+      menuBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+      });
+
+      // Close dropdown when clicking outside
+      document.addEventListener('click', () => {
+        dropdown.style.display = 'none';
+      });
+    }
+  </script>
+
   <!-- End New -->
 
   <div id="status"></div>
@@ -435,6 +574,7 @@
     <div id="apad" class="unselectable">
       <div id="apad-escape" data-key="Escape"></div>
       <div id="apad-enter" data-key="Enter"></div>
+      <div id="apad-shift" data-key="ShiftLeft"></div>
     </div>
   </div>
 
